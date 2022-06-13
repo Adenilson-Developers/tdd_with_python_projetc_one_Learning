@@ -22,8 +22,15 @@ from app import jscript_python
 
 
 class TestJavaScriptAndPython(TestCase):
-    def test_exit_javascrip_and_python(self):
-        jscript_python()
+    # def test_exit_javascrip_and_python(self):
+    #     jscript_python()
+
+    def test_jsandpy_deve_retornar_javascript_quando_input_for_multiplo_de_3(self):
+        """ jscript_python(3)' javaScript' """
+        valor_entrada = 3
+        valor_esperado = 'javaScript'
+        self.assertEqual(jscript_python(valor_entrada), valor_esperado)
+
 
 
 main()
