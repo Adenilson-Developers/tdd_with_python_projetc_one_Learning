@@ -25,12 +25,17 @@ class TestJavaScriptAndPython(TestCase):
     # def test_exit_javascrip_and_python(self):
     #     jscript_python()
 
-    def test_jsandpy_deve_retornar_javascript_quando_input_for_multiplo_de_3(self):
+    def test_jsAndpy_deve_retornar_javascript_quando_input_for_multiplo_de_3(self):
         """ jscript_python(3)' javaScript' """
         valor_entrada = 3
         valor_esperado = 'javaScript'
         self.assertEqual(jscript_python(valor_entrada), valor_esperado)
 
+    def test_jsAndpy_deve_retornar_python_quando_input_for_multiplo_de_5(self):
+        """ jscript_python(5) 'python' """
+        valor_entrada = 5
+        valor_esperado = 'python'
+        self.assertEqual(jscript_python(valor_entrada), valor_esperado)
 
 
 main()
