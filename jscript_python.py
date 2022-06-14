@@ -18,6 +18,7 @@ Uma entrada de valores numéricos (Lista)
 
 from unittest import TestCase, main
 from app import jscript_python
+from app import allStaks
 
 
 
@@ -47,6 +48,12 @@ class TestJavaScriptAndPython(TestCase):
         valor_entrada = 15
         valor_esperado = 'javaScript e python'
         self.assertEqual(jscript_python(valor_entrada), valor_esperado)
+
+    def test_jsAnpy_deve_retornar_javascript_python_e_javaScript_python_quando_receber_uma_lista_com_todos_os_multiplos(self):
+        """allStaks -> irá retornar todos os multiplos """
+        valores_entrada = [3,5,15]
+        valor_esperado = ['javaScript', 'python', 'javaScript e python']
+        self.assertEqual(allStaks(valores_entrada), valor_esperado)
 
 
 main()

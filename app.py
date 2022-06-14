@@ -1,5 +1,5 @@
 
-from functools import wraps
+from functools import partial, wraps
 from operator import eq, mod
 from typing import Callable, Any
 
@@ -46,6 +46,7 @@ def python(n: int) -> str:
 #         return 'python'
 
 jscript_python = compose(javaScript, python, javaScript_python)
+allStaks = compose(list, partial(map, jscript_python))
 
    
         
