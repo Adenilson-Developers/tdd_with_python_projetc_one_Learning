@@ -37,5 +37,11 @@ class TestJavaScriptAndPython(TestCase):
         valor_esperado = 'python'
         self.assertEqual(jscript_python(valor_entrada), valor_esperado)
 
+    def test_jsAndpy_deve_retornar_javascript_e_python_quando_for_multipo_de_15(self):
+        """jscript_python(15) -> 'javaScript e python' """
+        valor_entrada = 15
+        valor_esperado = 'javaScript e python'
+        self.assertEqual(jscript_python(valor_entrada), valor_esperado)
+
 
 main()
