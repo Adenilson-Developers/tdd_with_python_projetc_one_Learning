@@ -30,14 +30,17 @@ class TestJavaScriptAndPython(TestCase):
         valores_entrada = [3,6,9]
         valor_esperado = 'javaScript'
         for valor in valores_entrada:
+            #create subTest
             with self.subTest(valor=valor):
                 self.assertEqual(jscript_python(valor), valor_esperado)
 
     def test_jsAndpy_deve_retornar_python_quando_input_for_multiplo_de_5(self):
         """ jscript_python(5) 'python' """
-        valor_entrada = 5
+        valores_entrada = [5,10,20]
         valor_esperado = 'python'
-        self.assertEqual(jscript_python(valor_entrada), valor_esperado)
+        for valor in valores_entrada:
+            with self.subTest(valor=valor):
+                self.assertEqual(jscript_python(valor), valor_esperado)
 
     def test_jsAndpy_deve_retornar_javascript_e_python_quando_for_multipo_de_15(self):
         """jscript_python(15) -> 'javaScript e python' """
